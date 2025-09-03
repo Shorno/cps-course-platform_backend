@@ -11,14 +11,51 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
+    "title": {
       "type": "string",
-      "required": true,
-      "unique": true
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": false
+    },
+    "overview": {
+      "type": "blocks",
+      "required": true
     },
     "description": {
-      "type": "text",
-      "required": true
+      "type": "blocks"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "durationWeeks": {
+      "type": "integer"
+    },
+    "totalClasses": {
+      "type": "integer"
+    },
+    "totalContests": {
+      "type": "integer"
+    },
+    "totalProblems": {
+      "type": "integer"
+    },
+    "requirements": {
+      "type": "blocks"
+    },
+    "audience": {
+      "type": "blocks"
+    },
+    "modules": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::module.module"
     }
   }
 }
