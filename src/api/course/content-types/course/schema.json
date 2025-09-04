@@ -56,6 +56,27 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::module.module"
+    },
+    "highlights": {
+      "type": "json"
+    },
+    "registrationStartDate": {
+      "type": "date"
+    },
+    "registrationEndDate": {
+      "type": "date"
+    },
+    "classStartDate": {
+      "type": "date"
+    },
+    "fee": {
+      "type": "integer"
+    },
+    "enrollments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::enrollment.enrollment",
+      "mappedBy": "course"
     }
   }
 }

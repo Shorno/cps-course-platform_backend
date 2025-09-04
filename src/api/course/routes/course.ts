@@ -1,7 +1,4 @@
-/**
- * course router
- */
-
+// src/api/course/routes/course.ts
 import { factories } from '@strapi/strapi';
 
 export default factories.createCoreRouter('api::course.course');
